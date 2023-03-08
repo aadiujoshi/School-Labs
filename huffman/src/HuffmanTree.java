@@ -6,6 +6,25 @@ public class HuffmanTree {
     
     Node tree;
 
+    public HuffmanTree(String filename){
+        BitInputStream file = new BitInputStream(filename);
+
+        
+    }
+
+    private static int LEFT = 0;
+    private static int RIGHT = 1;
+
+    private void assign(Node node, int shift, int last, int dir){
+        if(node == null)
+            return;
+
+        node.address = (last) | (dir << shift);
+
+        assign(node.left, shift+1, node.address, LEFT);
+        assign(node.right, shift+1, node.address, RIGHT);
+    }
+
     public HuffmanTree(int[] counts){
         ArrayList<Node> nodes = new ArrayList<>();
 
@@ -28,6 +47,9 @@ public class HuffmanTree {
 
             Node n = new Node(n1.s + n2.s, n1.f + n2.f);
 
+            n.left = n1;
+            n.right = n2;
+
             nodes.remove(0);
             nodes.remove(0);
 
@@ -35,9 +57,15 @@ public class HuffmanTree {
         }
 
         System.out.println(nodes);
+
+        assign(tree, 0, 0, 0);
     }
 
-    public static void encode(BitOutputStream stream, String filename){
+    public void encode(String filename){
+        
+    }
+
+    public void decode(String filename){
         
     }
 }

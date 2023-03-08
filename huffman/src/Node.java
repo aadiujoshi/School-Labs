@@ -3,6 +3,8 @@ public class Node implements Comparable<Node> {
     String s;
     int f;
 
+    int address;
+
     public Node(String c, int f) {this.s = c; this.f = f;}
 
     @Override
