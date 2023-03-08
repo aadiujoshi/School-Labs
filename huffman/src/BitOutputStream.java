@@ -67,9 +67,4 @@ public class BitOutputStream {
 			throw new RuntimeException(e.toString());
 		}
 	}
-
-	// included to ensure that the stream is closed
-	protected void finalize() {
-		close();
-	}
 }

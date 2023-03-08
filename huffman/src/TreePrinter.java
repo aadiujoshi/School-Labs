@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+
 /**
  * A class used to print a binary tree of integers, for testing purposes
  * 
@@ -17,7 +22,7 @@ class TreePrinter
 	 */
 	public static void printTree(Node root) {
 		int maxLevel = TreePrinter.maxLevel(root);
-
+		
 		printNodeInternal(Collections.singletonList(root), 1, maxLevel);
 	}
 
