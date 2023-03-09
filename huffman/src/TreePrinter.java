@@ -82,6 +82,15 @@ class TreePrinter
 		printNodeInternal(newNodes, level + 1, maxLevel);
 	}
 
+    public void print(Node node){
+        if(node == null)
+            return;
+        System.out.println(node);
+
+        print(node.left);
+        print(node.right);
+    }
+
 	private static void printWhitespaces(int count) {
 		for (int i = 0; i < count; i++)
 			System.out.print(" ");
