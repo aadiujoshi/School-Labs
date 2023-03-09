@@ -15,6 +15,8 @@ public class HuffmanTree {
 
     String encoded_string;
 
+    String str;
+
     public HuffmanTree(String filename){
         Scanner file;
         try {
@@ -115,6 +117,8 @@ public class HuffmanTree {
     public HuffmanTree(int[] counts){
         ArrayList<Node> nodes = new ArrayList<>();
 
+        String _str = "";
+
         //init nodes in no particular order
         //not using priority queue since queue order can be lost when encoding
         for (int i = 0; i < counts.length; i++) {
@@ -122,8 +126,12 @@ public class HuffmanTree {
                 continue;
                 
             nodes.add(new Node(((char)i)+"", counts[i]));
+
+            _str += ((char)i)+"";
         }
         
+        this.str = _str;
+
         while(nodes.size() != 1){
             Collections.sort(nodes);
             // System.out.println(nodes);
@@ -155,13 +163,21 @@ public class HuffmanTree {
     }
 
     public void encode(String filename){
-        ArrayList<Node> leafs = new ArrayList<>();
         FileOutputStream out = null;
+
+        /*
+        ArrayList<Node> _charMap = new ArrayList<>();
+        getLeaves(treenode, _charMap);
+
+        HashMap<String, Character> charmap = new HashMap<>();
+
+        for (Node node : _charMap) {
+            charmap.put(node.address.substring(0, node.address.length()-1), node.s.charAt(0));
+        }
+         */
 
         try { 
             out = new FileOutputStream(filename); 
-            
-            getLeaves(tree, leafs);
             
             String f = treeLength(tree) + "\n";
 
@@ -176,10 +192,18 @@ public class HuffmanTree {
             // System.out.println(f);
 
             //write encoded word
-            for (var node : leafs) {
-                for (int i = 0; i < (int)node.f; i++) { 
-                    f += (String)node.address + " ";
-                }
+
+            ArrayList<Node> _charMap = new ArrayList<>();
+            getLeaves(treenode, _charMap);
+
+            HashMap<Character, String> charmap = new HashMap<>();
+
+            for (Node node : _charMap) {
+                charmap.put(node.s.charAt(0), node.address);
+            }
+            
+            for(int i = 0; i < str.length(); i++){
+                f += charmap.get(str.charAt(i)) + " ";
             }
             
             out.write(f.getBytes());
@@ -188,6 +212,37 @@ public class HuffmanTree {
         catch (IOException e) { 
             e.printStackTrace(); 
         }
+
+        // try { 
+        //     out = new FileOutputStream(filename); 
+            
+        //     getLeaves(tree, leafs);
+            
+        //     String f = treeLength(tree) + "\n";
+
+        //     //write tree, wrap reference string
+
+        //     String0 wrap = new String0(f);
+
+        //     treeToString(tree, wrap);
+
+        //     f = wrap.s;
+
+        //     // System.out.println(f);
+
+        //     //write encoded word
+        //     for (var node : leafs) {
+        //         for (int i = 0; i < (int)node.f; i++) { 
+        //             f += (String)node.address + " ";
+        //         }
+        //     }
+            
+        //     out.write(f.getBytes());
+        //     out.close();
+        // } 
+        // catch (IOException e) { 
+        //     e.printStackTrace(); 
+        // }
     }
 
     private int treeCount;
