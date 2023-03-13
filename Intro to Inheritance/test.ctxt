@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=test
+comment1.params=x
+comment1.target=test(int)
+comment2.params=args
+comment2.target=void\ main(java.lang.String[])
+comment3.params=
+comment3.target=int\ getX()
+comment4.params=
+comment4.target=void\ check()
+numComments=5
