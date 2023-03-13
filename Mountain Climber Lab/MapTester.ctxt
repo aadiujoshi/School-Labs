@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=MapTester
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=map\ g
+comment2.target=void\ testDrawPath(MapIllustrator,\ java.awt.Graphics)
+comment2.text=test\ the\ drawPath\ method,\ find\ path\ starting\ at\ row\ 200
+comment3.params=map\ g
+comment3.target=void\ testBestPath(MapIllustrator,\ java.awt.Graphics)
+comment3.text=test\ the\ getIndexOfLowest\ method,\ which\ finds\ the\ overall\ best\ path\ /\ starting\ row
+numComments=4
