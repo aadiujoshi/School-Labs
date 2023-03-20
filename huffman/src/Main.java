@@ -12,9 +12,13 @@ public class Main {
 
         //----------------------------------------------------------------------------
 
+        //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT
+        //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT
+        //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT
+        //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT
 
-//         HuffmanTree tree = new HuffmanTree(count, s);
-//         tree.encode("out.txt");
+        HuffmanTree tree = new HuffmanTree(count, s);
+        tree.encode("out.txt");
 
         HuffmanTree tree = new HuffmanTree("out.txt");
 
