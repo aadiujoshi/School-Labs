@@ -67,7 +67,7 @@ class Functions {
   }
 }
 
-public class Main {
+public class BinPacking {
   public static void main(String[] args) {
       try {
         Scanner scan = new Scanner("input20.txt");
