@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=SoundView
+comment1.params=clip
+comment1.target=SoundView(double[])
+comment2.params=g
+comment2.target=void\ paintComponent(java.awt.Graphics)
+numComments=3

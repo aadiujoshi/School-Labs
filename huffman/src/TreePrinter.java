@@ -22,7 +22,9 @@ class TreePrinter
 	 */
 	public static void printTree(Node root) {
 		int maxLevel = TreePrinter.maxLevel(root);
-		
+
+		System.out.println(maxLevel);
+
 		printNodeInternal(Collections.singletonList(root), 1, maxLevel);
 	}
 

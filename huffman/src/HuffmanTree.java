@@ -172,6 +172,17 @@ public class HuffmanTree {
         }
          */
 
+        /*
+        ArrayList<Node> _charMap = new ArrayList<>();
+        getLeaves(treenode, _charMap);
+
+        HashMap<String, Character> charmap = new HashMap<>();
+
+        for (Node node : _charMap) {
+            charmap.put(node.address.substring(0, node.address.length()-1), node.s.charAt(0));
+        }
+         */
+
         try { 
             out = new FileOutputStream(filename); 
             

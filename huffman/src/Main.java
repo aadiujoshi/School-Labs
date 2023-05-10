@@ -7,11 +7,19 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         String s = input.nextLine();
+        String s = input.nextLine();
     
         int[] count = toCharMap(s);
 
         //----------------------------------------------------------------------------
 
+        //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT
+        //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT
+        //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT
+        //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT
+
+        HuffmanTree tree = new HuffmanTree(count, s);
+        tree.encode("out.txt");
         //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT
         //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT
         //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT

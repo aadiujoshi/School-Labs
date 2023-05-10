@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Team
+comment1.params=
+comment1.target=Team()
+comment2.params=numPlayers
+comment2.target=Team(int)
+comment3.params=i
+comment3.target=Player\ getPlayerAtIndex(int)
+comment4.params=p\ index
+comment4.target=void\ addPlayer(Player,\ int)
+comment5.params=
+comment5.target=void\ printTeamStats()
+numComments=6

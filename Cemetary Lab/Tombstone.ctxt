@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Tombstone
+comment1.params=n\ death\ a\ addr
+comment1.target=Tombstone(java.lang.String,\ java.lang.String,\ double,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3

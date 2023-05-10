@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Circle
+comment1.params=ex\ why\ rad\ colour
+comment1.target=Circle(int,\ int,\ int,\ java.awt.Color)
+comment2.params=ex\ why\ dex\ die\ rad\ colour
+comment2.target=Circle(int,\ int,\ int,\ int,\ int,\ java.awt.Color)
+comment3.params=
+comment3.target=void\ draw()
+comment4.params=
+comment4.target=int\ getX()
+comment5.params=
+comment5.target=int\ getY()
+comment6.params=
+comment6.target=int\ getRadius()
+comment7.params=other
+comment7.target=boolean\ overlaps(Circle)
+comment8.params=sizeX\ sizeY
+comment8.target=void\ bounce(int,\ int)
+comment9.params=sizeX\ sizeY
+comment9.target=void\ update(int,\ int)
+numComments=10
