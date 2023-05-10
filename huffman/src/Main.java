@@ -7,7 +7,6 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         String s = input.nextLine();
-        String s = input.nextLine();
     
         int[] count = toCharMap(s);
 
@@ -17,17 +16,10 @@ public class Main {
         //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT
         //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT
         //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT
-
+        
         HuffmanTree tree = new HuffmanTree(count, s);
         tree.encode("out.txt");
-        //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT
-        //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT
-        //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT
-        //MAKE SURE YOU HAVE AN "out.txt" FILE LOCATED IN THE PROJECT
-
-        HuffmanTree tree0 = new HuffmanTree(count, s);
-        tree0.encode("out.txt");
-
+        
         HuffmanTree tree = new HuffmanTree("out.txt");
 
         System.out.println("\n" + tree.encoded_string + "\n");
